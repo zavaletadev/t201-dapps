@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+LinearLayout
+Es un tipo de componente estructural que permite
+disponer los elementos de manera vertical u horizontal
+permitiendo anidar componente estructurales
+el atributo principal de LinearLayout es su orientación
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <!--
+    Un Layout es la representación de los componentes
+    visuales de una interfaz de usuario para Android, escrita en XML
+
+    Los layouts tienen la siguiente estructura:
+    1.- Componente de disposición
+        2.- Componentes gráficos
+        3.- Componentes estructurales
+    -->
+
+    <!--
+    Los componentes visuales de un Layout utilizan la
+    misma estructura que las etiquetas de HTML
+    Cada componente indica propiedades (atributos)
+    Las propiedades le dan caracterísiticas especiales
+    a cada componente
+
+    Componente simple
+    <Componente />
+
+    Componente complejo
+    <Componente>
+        <Componente />
+        <Componente />
+        <Componente />
+    <Componente />
+
+    <Componente>
+        <Componente />
+        <Componente>
+            <Componente />
+            <Componente>
+                <Componente />
+            <Componente />
+        <Componente />
+        <Componente />
+    <Componente />
+    -->
+
+    <!--
+    Tamaños en android
+    wrap_content ===== Tamaño dinámnico en función del
+                        contenido
+    match_parent ===== Ocupa el tamaño del elemento que
+                        lo contiene
+    dp =============== (density-independent pixels) es una
+                        metrica uniforme para cualquier
+                        densidad de pantalla
+
+    sp =============== (scalable pixels) es una métrica que
+                        aplica para textos en función de la
+                        densidad de la pantalla
+
+    px =============== Es un punto de la resolución
+                       de la pantalla
+    -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:textSize="32sp"
+        android:textColor="#303F9F"
+        android:textStyle="bold|italic"
+        android:fontFamily="monospace"
+        android:letterSpacing="0.3" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Match parent"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"/>
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="250dp"
+        android:paddingStart="30dp"
+        android:paddingEnd="30dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp"
+        android:layout_gravity="center"/>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_tag_faces"
+        android:layout_marginVertical="20dp"
+        android:layout_gravity="center"
+        android:background="@color/rosa_mexicano"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/imagen_android" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:padding="15dp"
+        android:text="Boton"
+        android:drawableLeft="@drawable/ic_thumb_up"
+        android:drawableRight="@drawable/ic_tag_faces"
+        android:drawableTop="@drawable/ewok_small"
+        android:drawableBottom="@drawable/estrella_muerte_small"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/ewok" />
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/estrella_muerte" />
+
+    </LinearLayout>
+
+</LinearLayout>

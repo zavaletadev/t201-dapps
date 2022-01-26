@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HolaMundo</string>
+    <string name="saludo_es">Que tranza bandota</string>
+    <string name="saludo_en">Hello World</string>
+    <string name="nombre_app">T201 Hola Mundo</string>
+    <string name="nombre_app_corto">HM T201</string>
+</resources>

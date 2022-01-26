@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="mx.edu.uteq.dapps.holamundo">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/nombre_app_corto"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HolaMundo">
+
+        <!--
+        Un activity es la representación de una pantalla
+        de la aplicación móvil, un Activity está compuesto por
+        dos elementos
+        1.- Clase Java/Kotlin (Controlador) Activity
+        2.- Archivo XML (Vista/View) Layout
+
+        El punto antes del nomnbre significa que es una
+        clase Java/Kotlin
+        -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+
+            <!--
+            Intentfilter y Launcher indican que
+            esta es la Pantalla inicial de la app
+            -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>
