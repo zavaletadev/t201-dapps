@@ -11,6 +11,25 @@
         android:theme="@style/Theme.HolaMundo">
 
         <!--
+        Solo un Activity debería tener el intent-filter
+        Launcher
+        -->
+        <activity
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
+            android:name=".MenuActivity"
+            android:exported="true"
+            android:label="Menu">
+            <!--
+            Intentfilter y Launcher indican que
+            esta es la Pantalla inicial de la app
+            -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--
         Un activity es la representación de una pantalla
         de la aplicación móvil, un Activity está compuesto por
         dos elementos
@@ -22,19 +41,9 @@
         -->
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-            <!--
-            Intentfilter y Launcher indican que
-            esta es la Pantalla inicial de la app
-            -->
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:exported="true"
+            android:label="Main">
         </activity>
-
     </application>
 
 </manifest>
