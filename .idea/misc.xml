@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_email.xml" value="0.194" />
+        <entry key="app/src/main/res/drawable/ic_phone.xml" value="0.194" />
         <entry key="app/src/main/res/drawable/ic_tag_faces.xml" value="0.37538304392236976" />
+        <entry key="app/src/main/res/drawable/ic_whatsapp.xml" value="0.194" />
+        <entry key="app/src/main/res/layout/activity_linear_layout.xml" value="0.3625" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_menu.xml" value="0.3625" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3828125" />

@@ -14,6 +14,7 @@ public class MenuActivity extends AppCompatActivity {
     un atributo privado DEL MISMO TIPO DE DATO
      */
     private Button btnEj1;
+    private Button btnLinearlayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,7 @@ public class MenuActivity extends AppCompatActivity {
         findViewById(R.id._NOMBRE_);
          */
         btnEj1 = findViewById(R.id.btn_ej1);
+        btnLinearlayout = findViewById(R.id.btn_linearlayout);
 
         /*
         Programamos el evento click del boton con id "btn_ej1"
@@ -58,6 +60,17 @@ public class MenuActivity extends AppCompatActivity {
                 );
                 //Mandamos a la siguiente pantalla
                 startActivity(alPrimerejercicio);
+            }
+        });
+
+        btnLinearlayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent linearIntent = new Intent(
+                        MenuActivity.this,
+                        LinearLayoutActivity.class
+                );
+                startActivity(linearIntent);
             }
         });
 
