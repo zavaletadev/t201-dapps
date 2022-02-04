@@ -13,4 +13,20 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <!--
+    Los estilos en Android son un compendio de instrucciones
+    XML, aplican en el formato siguiente:
+    Por cada estilo que desemos aplicar, debemos utilizar
+    una etiqueta <item name='nombre_prop_estilo'>_VALOR_</item>
+
+    Los estilos deben indicar un elemento padre
+    -->
+    <style name="Theme.HolaMundo.BotonCalculadora"  parent="Theme.HolaMundo">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="backgroundTint">@color/fondo_boton_calc</item>
+        <item name="android:layout_marginStart">4dp</item>
+        <item name="android:layout_marginEnd">4dp</item>
+    </style>
 </resources>

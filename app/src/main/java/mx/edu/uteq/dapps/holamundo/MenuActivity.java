@@ -16,6 +16,7 @@ public class MenuActivity extends AppCompatActivity {
     private Button btnEj1;
     private Button btnLinearlayout;
     private Button btnScrollLayout;
+    private Button btnTablelayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +31,7 @@ public class MenuActivity extends AppCompatActivity {
         btnEj1 = findViewById(R.id.btn_ej1);
         btnLinearlayout = findViewById(R.id.btn_linearlayout);
         btnScrollLayout = findViewById(R.id.btn_scroll_layout);
+        btnTablelayout = findViewById(R.id.btn_tablelayout);
 
         /*
         Programamos el evento click del boton con id "btn_ej1"
@@ -88,5 +90,20 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-    }
-}
+        /*
+        clic del boton tablelayout
+         */
+        btnTablelayout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(
+                        new Intent(
+                                MenuActivity.this,
+                                TableLayoutActivity.class
+                        )
+                );
+            }
+        });
+
+    } // termina oncreate
+} // termina la clase

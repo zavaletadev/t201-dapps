@@ -9,11 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HolaMundo">
+
+        <activity
+            android:label="Table Layout"
+            android:name=".TableLayoutActivity"
+            android:exported="false" />
+
         <activity
             android:name=".ScrollActivity"
             android:exported="false"
-            android:label="Ejemplo Scroll"/>
-
+            android:label="Ejemplo Scroll" />
         <activity
             android:name=".LinearLayoutActivity"
             android:exported="false"

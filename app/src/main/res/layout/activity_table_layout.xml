@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TableLayoutActivity"
+    android:orientation="vertical"
+    android:weightSum="12">
+
+    <!--
+    Creamos un Layout con un peso de una cuaerta parte de
+    todo el viewport
+    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:orientation="vertical"
+        android:background="@color/fondo_texto_calc"
+        android:layout_weight="3">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="12388.23"
+            android:textAlignment="textEnd"
+            android:textSize="32sp"
+            android:fontFamily="monospace"
+            android:letterSpacing="0.1"
+            android:gravity="center"
+            android:layout_marginHorizontal="4dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/fondo_botones_calc"
+        android:layout_weight="9" >
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="10">
+
+            <!--
+            Los TL se componen por  filas y las filas
+            por componentes (columnas)
+            -->
+            <TableRow android:layout_weight="2">
+                <Button android:text="AC"
+                    style="@style/Theme.HolaMundo.BotonCalculadora"/>
+
+                <Button android:text="+/-"
+                    style="@style/Theme.HolaMundo.BotonCalculadora"/>
+
+                <Button android:text="%"
+                    style="@style/Theme.HolaMundo.BotonCalculadora"/>
+
+                <Button android:text="/" style="@style/Theme.HolaMundo.BotonCalculadora" />
+            </TableRow>
+
+        </TableLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
