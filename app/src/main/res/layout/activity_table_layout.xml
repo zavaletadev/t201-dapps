@@ -9,7 +9,7 @@
     android:weightSum="12">
 
     <!--
-    Creamos un Layout con un peso de una cuaerta parte de
+    Creamos un Layout con un peso de una cuarta parte de
     todo el viewport
     -->
     <LinearLayout
@@ -17,7 +17,8 @@
         android:layout_height="1dp"
         android:orientation="vertical"
         android:background="@color/fondo_texto_calc"
-        android:layout_weight="3">
+        android:layout_weight="4"
+        android:backgroundTint="#000">
 
         <TextView
             android:layout_width="match_parent"
@@ -58,6 +59,16 @@
                     style="@style/Theme.HolaMundo.BotonCalculadora"/>
 
                 <Button android:text="/" style="@style/Theme.HolaMundo.BotonCalculadora" />
+            </TableRow>
+
+            <TableRow android:layout_weight="2">
+                <Button android:text="AC"
+                    android:layout_span="2"
+                    style="@style/Theme.HolaMundo.BotonCalculadora"/>
+
+                <Button android:text="+/-"
+                    android:layout_span="2"
+                    style="@style/Theme.HolaMundo.BotonCalculadora"/>
             </TableRow>
 
         </TableLayout>

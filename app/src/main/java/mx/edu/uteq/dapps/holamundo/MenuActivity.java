@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 
@@ -17,6 +18,7 @@ public class MenuActivity extends AppCompatActivity {
     private Button btnLinearlayout;
     private Button btnScrollLayout;
     private Button btnTablelayout;
+    private Button btnControles;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,7 @@ public class MenuActivity extends AppCompatActivity {
         btnLinearlayout = findViewById(R.id.btn_linearlayout);
         btnScrollLayout = findViewById(R.id.btn_scroll_layout);
         btnTablelayout = findViewById(R.id.btn_tablelayout);
+        btnControles = findViewById(R.id.btn_controles);
 
         /*
         Programamos el evento click del boton con id "btn_ej1"
@@ -100,6 +103,20 @@ public class MenuActivity extends AppCompatActivity {
                         new Intent(
                                 MenuActivity.this,
                                 TableLayoutActivity.class
+                        )
+                );
+            }
+        });
+
+        /*
+        Click btn controles
+         */
+        btnControles.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(
+                        new Intent(MenuActivity.this,
+                                ControlesEntradaActivity.class
                         )
                 );
             }

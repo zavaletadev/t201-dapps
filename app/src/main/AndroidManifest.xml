@@ -10,11 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HolaMundo">
 
+        <!--
+        android:windowSoftInputMode="adjustResize"
+        Permite usar el Scroll aún con el teclado
+        activo
+        -->
         <activity
-            android:label="Table Layout"
+            android:name=".ControlesEntradaActivity"
+            android:exported="false"
+            android:label="Controles de entrada"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
             android:name=".TableLayoutActivity"
-            android:exported="false" />
-
+            android:exported="false"
+            android:label="Table Layout" />
         <activity
             android:name=".ScrollActivity"
             android:exported="false"

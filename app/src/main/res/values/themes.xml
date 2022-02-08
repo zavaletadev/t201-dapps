@@ -29,4 +29,12 @@
         <item name="android:layout_marginStart">4dp</item>
         <item name="android:layout_marginEnd">4dp</item>
     </style>
+
+    <!-- Estilo para mis campos de texto -->
+    <style name="Theme.HolaMundo.MiEditText" parent="Theme.HolaMundo">
+        <item name="android:minHeight">48dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
 </resources>
