@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InstruccionesActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Adivina el número"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
+            style="@style/TextAppearance.MaterialComponents.Headline3"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:layout_marginVertical="8dp"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:text="El objetivo principal del juego es adivinar un número de un rango seleccionado con un número de intentos establecidos, en el caso de DE y AU adicionamos un intervalo de tiempo por cada intento." />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:layout_marginVertical="8dp"
+            style="@style/TextAppearance.MaterialComponents.Subtitle1"
+            android:text="El jugador deberá seleccionar entre dos dificultades (Normal y Difícil) para SA y tres dificultades para DE y AU (Normal, Difícil y Épico)." />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_marginVertical="8dp"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:text="Cuando jugamos en Fácil, el rango de números establecidos va de 1 a 10 con un total de 3 intentos." />
+
+        <TextView
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:paddingHorizontal="16dp"
+            android:text="Cuando jugamos en Difícil, el rango de números establecidos va de 1 a 30 con un total de 4 intentos." />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="16dp"
+            android:layout_marginVertical="8dp"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:text="Cuando jugamos en Épico, el rango de números establecidos va de 1 a 50 con un total de 5 intentos y un tiempo máximo de juego de 60 segundos, mientras se sigan adivinando números, tanto el número de intentos como el cronometro serán reiniciados, cuando el jugador haya perdido, se mostrará el número de veces que adivinó el número." />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
