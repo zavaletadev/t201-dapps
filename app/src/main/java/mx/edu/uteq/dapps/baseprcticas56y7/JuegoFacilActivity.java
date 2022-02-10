@@ -6,28 +6,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 public class JuegoFacilActivity extends AppCompatActivity {
-
-    private ActionBar actionBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_juego_facil);
 
-        actionBar = getSupportActionBar();
+        //Aplicamos un diseño  en pantalla  completa
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
 
-        if (actionBar != null) {
-            actionBar.setDisplayHomeAsUpEnabled(true);
-        }
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == android.R.id.home) {
-            finish();
-        }
-        return super.onOptionsItemSelected(item);
     }
 }

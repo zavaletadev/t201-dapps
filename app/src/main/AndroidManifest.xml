@@ -12,12 +12,13 @@
         <activity
             android:name=".DemoJuegoActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"/>
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".JuegoFacilActivity"
             android:exported="false"
             android:label="Adivina (Fácil)"
-            android:screenOrientation="landscape" />
+            android:screenOrientation="landscape"
+            android:theme="@style/Theme.BasePrácticas56Y7.FullScreen" />
         <activity
             android:name=".ContadorTiempoActivity"
             android:exported="false"
