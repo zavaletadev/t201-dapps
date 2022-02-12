@@ -60,6 +60,27 @@
                 android:text="controles"
                 android:layout_margin="8dp" />
 
+            <Button
+                android:id="@+id/btn_estilostexto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Textos Material DEsign" />
+
+            <Button
+                android:id="@+id/btn_estilosboton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="botones material design" />
+
+            <Button
+                android:id="@+id/btn_controles_sel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Controles de seleccion" />
+
         </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

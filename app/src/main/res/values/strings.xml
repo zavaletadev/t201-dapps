@@ -4,4 +4,30 @@
     <string name="saludo_en">Hello World</string>
     <string name="nombre_app">T201 Hola Mundo</string>
     <string name="nombre_app_corto">HM T201</string>
+
+    <!--
+    Agregamos un arreglop de palabras para
+    popular nuestro spinner
+    -->
+    <string-array name="arr_len_prog">
+        <item>Selecciona un lenguaje</item>
+        <item>Java</item>
+        <item>PHP</item>
+        <item>Javacript</item>
+        <item>Kotlin</item>
+        <item>ReactNative</item>
+        <item>Swift</item>
+        <item>Python</item>
+        <item>C++</item>
+        <item>C</item>
+    </string-array>
+
+    <!--
+    Arreglo de valores de inicio y término
+    de un Rangeslider
+    -->
+    <string-array name="slider_range_valores">
+        <item>20</item>
+        <item>80</item>
+    </string-array>
 </resources>

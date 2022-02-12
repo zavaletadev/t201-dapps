@@ -9,7 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HolaMundo">
-
+        <activity
+            android:name=".ControlesSeleccionActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".EstiloBotonesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".EstilosTextoActivity"
+            android:exported="false"
+            android:label="Estilos de texto Material Design" />
         <!--
         android:windowSoftInputMode="adjustResize"
         Permite usar el Scroll aún con el teclado
@@ -19,7 +29,7 @@
             android:name=".ControlesEntradaActivity"
             android:exported="false"
             android:label="Controles de entrada"
-            android:windowSoftInputMode="adjustResize"/>
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".TableLayoutActivity"
             android:exported="false"

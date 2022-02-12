@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 
@@ -19,6 +18,9 @@ public class MenuActivity extends AppCompatActivity {
     private Button btnScrollLayout;
     private Button btnTablelayout;
     private Button btnControles;
+    private Button btnEstilostexto;
+    private Button btnEstilosBoton;
+    private Button btnControlesSel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +35,11 @@ public class MenuActivity extends AppCompatActivity {
         btnEj1 = findViewById(R.id.btn_ej1);
         btnLinearlayout = findViewById(R.id.btn_linearlayout);
         btnScrollLayout = findViewById(R.id.btn_scroll_layout);
-        btnTablelayout = findViewById(R.id.btn_tablelayout);
-        btnControles = findViewById(R.id.btn_controles);
-
+        btnTablelayout  = findViewById(R.id.btn_tablelayout);
+        btnControles    = findViewById(R.id.btn_controles);
+        btnEstilostexto = findViewById(R.id.btn_estilostexto);
+        btnEstilosBoton = findViewById(R.id.btn_estilosboton);
+        btnControlesSel = findViewById(R.id.btn_controles_sel);
         /*
         Programamos el evento click del boton con id "btn_ej1"
         El evento click utiliza el método seOnClickListener y pasamos
@@ -117,6 +121,48 @@ public class MenuActivity extends AppCompatActivity {
                 startActivity(
                         new Intent(MenuActivity.this,
                                 ControlesEntradaActivity.class
+                        )
+                );
+            }
+        });
+
+        /*
+        Click estilos texto
+         */
+        btnEstilostexto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(
+                        new Intent(
+                                MenuActivity.this,
+                                EstilosTextoActivity.class
+                        )
+                );
+            }
+        });
+
+        /*
+        click estilos boton
+         */
+        btnEstilosBoton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(
+                        new Intent(
+                                MenuActivity.this,
+                                EstiloBotonesActivity.class
+                        )
+                );
+            }
+        });
+
+        btnControlesSel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(
+                        new Intent(
+                                MenuActivity.this,
+                                ControlesSeleccionActivity.class
                         )
                 );
             }

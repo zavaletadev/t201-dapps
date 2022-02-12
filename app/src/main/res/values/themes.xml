@@ -37,4 +37,18 @@
         <item name="android:layout_marginBottom">8dp</item>
     </style>
 
+    <!-- Estilo para nuestro Switch -->
+    <style name="Theme.HolaMundo.MiSwitch" parent="Theme.HolaMundo">
+        <item name="android:colorControlActivated">@color/rosa_mexicano</item>
+    </style>
+
+    <!-- Estilo para RatingBar -->
+    <style name="Theme.HolaMundo.MiRatingBar" parent="Theme.HolaMundo">
+        <!-- Color cuando la estrella no se llenó-->
+        <item name="colorControlNormal">@color/rosa_pastel</item>
+        <!-- Color cuando la estrella se llenó -->
+        <item name="android:colorControlActivated">@color/rosa_mexicano</item>
+    </style>
+
+
 </resources>

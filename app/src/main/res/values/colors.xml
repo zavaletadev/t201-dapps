@@ -13,4 +13,5 @@
     <color name="fondo_texto_calc">#FFF9F3F3</color>
     <color name="fondo_botones_calc">#FFDDDDDD</color>
     <color name="fondo_boton_calc">#FFF25287</color>
+    <color name="danger">#dc3545</color>
 </resources>

@@ -1,9 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EstilosTextoActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--
+        El atributo style nos permite
+        reutilizar cualquier estiño de
+        MaterialComponentes
+        https://material.io/design/typography/the-type-system.html#type-scale
+        -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="Headline1"
+            android:textAlignment="center"
+            style="@style/TextAppearance.MaterialComponents.Headline1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Headline2"
+            android:textAlignment="center"
+            style="@style/TextAppearance.MaterialComponents.Headline2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Headline3"
+            android:textAlignment="center"
+            style="@style/TextAppearance.MaterialComponents.Headline3" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Headline4"
+            android:textAlignment="center"
+            style="@style/TextAppearance.MaterialComponents.Headline4" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Headline5"
+            android:textAlignment="center"
+            style="@style/TextAppearance.MaterialComponents.Headline5" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Headline6"
+            android:textAlignment="center"
+            style="@style/TextAppearance.MaterialComponents.Headline6" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Subtitle1"
+            android:textAlignment="center"
+            style="@style/TextAppearance.MaterialComponents.Subtitle1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Subtitle2"
+            android:textAlignment="center"
+            style="@style/TextAppearance.MaterialComponents.Subtitle2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Body1"
+            android:textAlignment="center"
+            style="@style/TextAppearance.MaterialComponents.Body1" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Body2"
+            android:textAlignment="center"
+            style="@style/TextAppearance.MaterialComponents.Body2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="Caption"
+            android:textAlignment="center"
+            style="@style/TextAppearance.MaterialComponents.Caption" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="overline"
+            android:textAlignment="center"
+            style="@style/TextAppearance.MaterialComponents.Overline" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="button"
+            android:textAlignment="center"
+            style="@style/TextAppearance.MaterialComponents.Button" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

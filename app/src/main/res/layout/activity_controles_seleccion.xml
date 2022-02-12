@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ControlesSeleccionActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="8dp">
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Radio 1 de un grupo"
+                android:textAlignment="center"/>
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Radio 1 de un grupo"
+                android:textAlignment="center"/>
+        </RadioGroup>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--
+                    Los checkbos a diferencia de los radios
+                    son de selección múltiple (puede seleccionar
+                    cuanto quieran)
+                    -->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        style="@style/TextAppearance.MaterialComponents.Body1"
+                        android:textAlignment="textEnd"
+                        android:layout_margin="4dp"
+                        android:text="Checkbox" />
+
+                    <CheckBox
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Check 1" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <!--
+                    Los checkbos a diferencia de los radios
+                    son de selección múltiple (puede seleccionar
+                    cuanto quieran)
+                    -->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        style="@style/TextAppearance.MaterialComponents.Body1"
+                        android:textAlignment="textEnd"
+                        android:layout_margin="4dp"
+                        android:text="Checkbox" />
+
+                    <CheckBox
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Check 2" />
+                </TableRow>
+
+                <TableRow>
+                    <!--
+                    Switch es una alternativa a
+                    checkbox. solo con una diferencia
+                    visual
+                    -->
+                    <Switch android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp"
+                        android:textAlignment="textStart"
+                        android:layout_margin="8dp"
+                        android:text="Acepto la evaluación (Switch)"
+                        android:theme="@style/Theme.HolaMundo.MiSwitch"/>
+                </TableRow>
+            </TableLayout>
+        </RadioGroup>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:entries="@array/arr_len_prog"
+            android:minHeight="48dp"/>
+
+        <!--
+        Los sliders se dividen en dos grupos
+        Slider simple (selección de un valor en un límite)
+        Slider de rango (selección de un valor mínimo y uno máximo dentro
+        del límite
+
+        indicar el mínimo
+        indicar el máximo
+        indicar el incremento
+        -->
+        <com.google.android.material.slider.Slider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="Slider ejemplo"
+            android:valueFrom="1"
+            android:stepSize="1"
+            android:value="7"
+            android:valueTo="10"
+            app:tickVisible="false"
+            android:layout_marginVertical="8dp"/>
+
+        <!--
+        Range Slider necesita un arreglo que indique
+        los valores de inicio y termino de selección
+        -->
+        <com.google.android.material.slider.RangeSlider
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="Slider Range Ejemplo"
+            android:layout_marginVertical="8dp"
+            android:valueFrom="1"
+            android:valueTo="100"
+            android:stepSize="0.5"
+            app:tickVisible="false"
+            app:values="@array/slider_range_valores"/>
+
+        <!--
+        RateBar muestra un número de estrellas
+        de manera informativo o bien, interactiva
+        que el usuario pude aplicar
+
+        numStars indica el numero de estrellas a visualizar
+
+        El anchio correcto de un RatingBar
+        SIEMPRE ES wrap_content
+
+        isIndicator define se si puede interactuar
+        o no (en true no se puede interactuar)
+
+        rating = valor defecto
+        stepSize = incremento
+
+        RatingBar pequeño
+        -->
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:layout_gravity="center"
+            android:numStars="7"
+            android:rating="5.5"
+            android:isIndicator="true"
+            android:stepSize="0.5"
+            style="@style/Widget.AppCompat.RatingBar.Small"/>
+
+        <!--
+        colores personalizados en RatingBar
+
+        Creamos nuestro estilo en nuestro tema
+        theme.xml
+         -->
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:layout_gravity="center"
+            android:numStars="5"
+            android:rating="1.5"
+            android:isIndicator="false"
+            android:stepSize="0.5"
+            android:contentDescription="RatingBar ejemplo"
+            android:theme="@style/Theme.HolaMundo.MiRatingBar"/>
+
+        <!--
+        AutoCompleteTextView
+
+        Es un TextInputEditText con esteroides
+        por lo que dene contenerlo TextInputLayout
+        -->
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="8dp"
+            android:hint="Selecciona"
+            app:endIconMode="dropdown_menu"
+            app:endIconTint="@color/purple_700"
+            app:startIconDrawable="@drawable/ic_code"
+            app:startIconTint="@color/purple_700">
+
+            <!--
+            Cuando utilizamos un AutoCompleteTextView
+            Debemos agregar la lista de datos
+            desde un Arreglo en el
+            Controlador (Activity archivo.java)
+
+            lines = cuantas lineas a la vez
+
+            focusable = en true, muestra el teclado,
+                        en false, lo oculta
+
+
+            -->
+            <AutoCompleteTextView
+                android:id="@+id/actv_len_prog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="8dp"
+                android:minHeight="56dp"
+                android:focusable="false"
+                android:lines="1" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_datepicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:hint="Selecciona una fecha"
+            app:startIconDrawable="@drawable/ic_clear"
+            app:startIconTint="@color/danger"
+            app:endIconMode="custom"
+            app:endIconDrawable="@drawable/ic_edit_calendar"
+            app:endIconTint="@color/purple_700"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiet_datepicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="date"
+                android:text="29/05/1988"
+                android:focusable="false"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mb_datepicker_range"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="64dp"
+            android:layout_marginHorizontal="8dp"
+            android:text="date picker range"
+            app:icon="@drawable/ic_edit_calendar"
+            app:iconTint="@color/purple_700"
+            app:cornerRadius="26dp"
+            android:paddingVertical="8dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            app:strokeWidth="2dp"
+            app:strokeColor="@color/purple_700"
+            android:textColor="@color/purple_700"/>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
