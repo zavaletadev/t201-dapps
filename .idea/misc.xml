@@ -10,13 +10,13 @@
         <entry key="app/src/main/res/layout/activity_controles_entrada.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_controles_seleccion.xml" value="0.3377659574468085" />
         <entry key="app/src/main/res/layout/activity_estilo_botones.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/activity_estilos_texto.xml" value="0.1648148148148148" />
+        <entry key="app/src/main/res/layout/activity_estilos_texto.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_linear_layout.xml" value="0.3625" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="app/src/main/res/layout/activity_material_text_buttons.xml" value="0.18177083333333333" />
-        <entry key="app/src/main/res/layout/activity_menu.xml" value="0.355464759959142" />
+        <entry key="app/src/main/res/layout/activity_menu.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_scroll.xml" value="1.0" />
-        <entry key="app/src/main/res/layout/activity_table_layout.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_table_layout.xml" value="0.25" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3828125" />
       </map>
     </option>

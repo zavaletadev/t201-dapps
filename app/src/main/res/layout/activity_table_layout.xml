@@ -17,15 +17,15 @@
         android:layout_height="1dp"
         android:orientation="vertical"
         android:background="@color/fondo_texto_calc"
-        android:layout_weight="4"
-        android:backgroundTint="#000">
+        android:layout_weight="4">
 
         <TextView
+            android:id="@+id/tv_display"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="12388.23"
+            android:text="0"
             android:textAlignment="textEnd"
-            android:textSize="32sp"
+            style="@style/TextAppearance.MaterialComponents.Headline3"
             android:fontFamily="monospace"
             android:letterSpacing="0.1"
             android:gravity="center"
@@ -37,7 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="@color/fondo_botones_calc"
-        android:layout_weight="9" >
+        android:layout_weight="8" >
 
         <TableLayout
             android:layout_width="match_parent"
@@ -50,9 +50,11 @@
             -->
             <TableRow android:layout_weight="2">
                 <Button android:text="AC"
+                    android:id="@+id/btn_ac"
                     style="@style/Theme.HolaMundo.BotonCalculadora"/>
 
                 <Button android:text="+/-"
+                    android:id="@+id/btn_masmenos"
                     style="@style/Theme.HolaMundo.BotonCalculadora"/>
 
                 <Button android:text="%"
@@ -62,12 +64,69 @@
             </TableRow>
 
             <TableRow android:layout_weight="2">
-                <Button android:text="AC"
+                <Button android:text="7"
+                    android:id="@+id/btn_n7"
+                    style="@style/Theme.HolaMundo.BotonCalculadora"
+                    android:onClick="clickNumero"/>
+
+                <Button android:text="8"
+                    android:id="@+id/btn_n8"
+                    style="@style/Theme.HolaMundo.BotonCalculadora"
+                    android:onClick="clickNumero"/>
+
+                <Button android:text="9"
+                    android:id="@+id/btn_n9"
+                    style="@style/Theme.HolaMundo.BotonCalculadora"
+                    android:onClick="clickNumero"/>
+
+                <Button android:text="X" style="@style/Theme.HolaMundo.BotonCalculadora" />
+            </TableRow>
+
+            <TableRow android:layout_weight="2">
+                <Button android:text="4"
+                    style="@style/Theme.HolaMundo.BotonCalculadora"
+                    android:onClick="clickNumero"/>
+
+                <Button android:text="5"
+                    style="@style/Theme.HolaMundo.BotonCalculadora"
+                    android:onClick="clickNumero"/>
+
+                <Button android:text="6"
+                    style="@style/Theme.HolaMundo.BotonCalculadora"
+                    android:onClick="clickNumero"/>
+
+                <Button android:text="-" style="@style/Theme.HolaMundo.BotonCalculadora" />
+            </TableRow>
+
+            <TableRow android:layout_weight="2">
+                <Button android:text="1"
+                    style="@style/Theme.HolaMundo.BotonCalculadora"
+                    android:onClick="clickNumero"/>
+
+                <Button android:text="2"
+                    style="@style/Theme.HolaMundo.BotonCalculadora"
+                    android:onClick="clickNumero"/>
+
+                <Button android:text="3"
+                    style="@style/Theme.HolaMundo.BotonCalculadora"
+                    android:onClick="clickNumero"/>
+
+                <Button android:text="+"
+                    android:id="@+id/btn_mas"
+                    style="@style/Theme.HolaMundo.BotonCalculadora" />
+            </TableRow>
+
+            <TableRow android:layout_weight="2">
+                <Button android:text="0"
                     android:layout_span="2"
+                    style="@style/Theme.HolaMundo.BotonCalculadora"
+                    android:onClick="clickNumero"/>
+
+                <Button android:text="."
+                    android:onClick="clickNumero"
                     style="@style/Theme.HolaMundo.BotonCalculadora"/>
 
-                <Button android:text="+/-"
-                    android:layout_span="2"
+                <Button android:text="="
                     style="@style/Theme.HolaMundo.BotonCalculadora"/>
             </TableRow>
 
