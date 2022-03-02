@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/FirstFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="mx.edu.uteq.dapps.ejemplofragment.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="mx.edu.uteq.dapps.ejemplofragment.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+
+    <!--
+    - Indicamos el id del fragmento
+    - su clase Java / Kotlin
+    - su título
+    - su layout
+    -->
+    <fragment
+        android:id="@+id/TresFragment"
+        android:name="mx.edu.uteq.dapps.ejemplofragment.TresFragment"
+        android:label="Fragmento tres"
+        tools:layout="@layout/fragment_tres">
+    </fragment>
+
+
+</navigation>
