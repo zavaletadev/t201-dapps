@@ -50,5 +50,18 @@
         <item name="android:colorControlActivated">@color/rosa_mexicano</item>
     </style>
 
+    <style name="Theme.HolaMundo.MiTIL" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/border_til</item>
+        <item name="hintTextColor">#FF9914</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:padding">8dp</item>
+    </style>
+
+    <style name="Theme.HolaMundo.MiTIL.Login" parent="Theme.HolaMundo.MiTIL">
+        <item name="startIconDrawable">@drawable/ic_star</item>
+        <item name="startIconTint">#A45D00</item>
+        <item name="endIconMode">clear_text</item>
+        <item name="helperText">El texto viene desde el estilo</item>
+    </style>
 
 </resources>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--
+    Todos los elementos del menu se generan por medio
+    de Items que son anidables
+
+    Los atributos minimos de un Item de menú:
+    1.- id
+    2.- título
+    Opcionales:
+    *.- orderInCategory
+        Permite modificar el órden de visualización
+        agregando un valor numérico ascendente
+
+    *.- showAsaction
+        Muestra directamente el item en el
+        ActionBar
+
+    *.- icon
+
+    Por defecto los elementos de un menú con
+    contextuales
+    -->
+    <item
+        android:id="@+id/menu_m1"
+        android:title="Menú 1"
+        android:orderInCategory="100"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/menu_m2"
+        android:title="Menú 2"
+        android:orderInCategory="90"/>
+
+    <item
+        android:id="@+id/menu_m3"
+        android:title="Menú 3"
+        android:orderInCategory="95"/>
+
+    <!--
+    Los menús permiten la anidación de sus componentes
+    -->
+    <item android:id="@+id/menu_m4"
+        android:title="Menú 4"
+        android:orderInCategory="105">
+        <menu>
+            <item android:id="@+id/menu_sm1"
+                android:title="Sub menú 1" />
+
+            <item android:id="@+id/menu_sm2"
+                android:title="Sub menú 2" />
+
+            <item android:id="@+id/menu_sm3"
+                android:title="Sub menú 3" />
+        </menu>
+    </item>
+
+    <!--
+    Los menús pueden ser acciones del ActionBar
+    agregando la propiedad
+    "showAsAction"
+    -->
+    <item android:id="@+id/menu_guardar"
+        android:title="Gaurdar"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_save" />
+</menu>

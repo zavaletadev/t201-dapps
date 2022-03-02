@@ -14,6 +14,10 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp">
 
+        <androidx.appcompat.widget.SearchView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -296,8 +300,25 @@
             android:layout_marginBottom="80dp"
             android:text="Finalizar"/>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="12">
 
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                app:icon="@drawable/ic_save"
+                app:iconGravity="textTop"
+                app:iconSize="64dp"
+                app:iconTint="@color/rosa_mexicano" />
+
+        </LinearLayout>
 
     </LinearLayout>
+
+
 
 </androidx.core.widget.NestedScrollView>
