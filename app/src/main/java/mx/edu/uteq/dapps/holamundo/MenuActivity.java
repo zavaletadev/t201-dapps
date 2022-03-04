@@ -22,6 +22,7 @@ public class MenuActivity extends AppCompatActivity {
     private Button btnEstilosBoton;
     private Button btnControlesSel;
     private Button btnFragmentos;
+    private Button btnValidaciones;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +43,7 @@ public class MenuActivity extends AppCompatActivity {
         btnEstilosBoton = findViewById(R.id.btn_estilosboton);
         btnControlesSel = findViewById(R.id.btn_controles_sel);
         btnFragmentos = findViewById(R.id.btn_fragmentos);
+        btnValidaciones = findViewById(R.id.btn_validaciones);
         /*
         Programamos el evento click del boton con id "btn_ej1"
         El evento click utiliza el método seOnClickListener y pasamos
@@ -180,6 +182,16 @@ public class MenuActivity extends AppCompatActivity {
                         )
                 );
             }
+        });
+
+        //Funcione Lambda
+        btnValidaciones.setOnClickListener(view -> {
+            startActivity(
+                    new Intent(
+                            MenuActivity.this,
+                            ValidacionesActivity.class
+                    )
+            );
         });
 
     } // termina oncreate

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ValidacionesActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+<!--        Campo nombre-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_nombre"
+            android:layout_margin="8dp"
+            android:padding="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre"
+            app:helperText="Escribe tu nombre completo"
+            app:startIconDrawable="@drawable/ic_person"
+            app:endIconMode="clear_text"
+            app:startIconTint="?colorPrimary"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiet_nombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:maxLength="128"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+<!--        /Campo nombre-->
+
+<!--        Correo electrónico-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:padding="8dp"
+            android:hint="Correo electrónico"
+            app:helperText="Escribe tu correo electrónico para registrarte"
+            app:startIconDrawable="@drawable/ic_alternate_email"
+            app:startIconTint="?colorPrimary"
+            app:endIconMode="clear_text"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiet_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:maxLength="128"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+<!--        /Correo electrónico-->
+
+<!--        Teléfono-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_telefono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:padding="8dp"
+            android:hint="Teléfono"
+            app:helperText="Escribe tu teléfono a 10 dígitos"
+            app:startIconDrawable="@drawable/ic_local_phone"
+            app:startIconTint="?colorPrimary"
+            app:endIconMode="clear_text"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tiet_telefono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:maxLength="10"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+<!--        /Teléfono-->
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mb_validar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:text="Registrarse"
+            app:icon="@drawable/ic_check_circle"
+            app:iconGravity="textStart"
+            app:cornerRadius="20dp"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            app:strokeColor="?colorPrimary"
+            app:strokeWidth="2dp"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

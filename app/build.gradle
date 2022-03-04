@@ -24,6 +24,14 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    /*
+    Activamos la auto vinvulación de componentes por medio de
+    Binding
+     */
+    viewBinding {
+        enabled = true
+    }
 }
 
 dependencies {
