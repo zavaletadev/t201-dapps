@@ -10,9 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HolaMundo">
         <activity
+            android:name=".ContenedorFragmentosActivity"
+            android:exported="false" />
+        <activity
             android:name=".ControlesSeleccionActivity"
             android:exported="false"
-            android:windowSoftInputMode="adjustResize"/>
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".EstiloBotonesActivity"
             android:exported="false" />

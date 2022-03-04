@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_fragmentos"
+    app:startDestination="@id/PrimerFragment">
+
+    <!-- Por cada Fragmento que necesitemos visualizar en el
+    activity, debemos generar una referencia de tivo <fragment />
+    con la siguiente información:
+    1.- ID del fragmento
+    2.- Clase Java (name)
+    3.- Layout XML (Vista)
+    4.- Label (Etiqueta / título)
+
+    Una ves listados todos los fragmentos de la navegación
+    Se debe elegir el fragmento de inicio
+    -->
+    <fragment
+        android:id="@+id/PrimerFragment"
+        android:name="mx.edu.uteq.dapps.holamundo.PrimerFragment"
+        tools:layout="@layout/fragment_primer"
+        android:label="Fragmento uno">
+        <!--
+        Las acciones son eventos de navegación
+        entre grafmentos del punto A al punto B
+        necesitan:
+        1.- ID
+        2.- destino
+        -->
+        <action
+            android:id="@+id/ac_f1_f2"
+            app:destination="@id/SegundoFragment" />
+
+        <action android:id="@+id/ac_f1_f3"
+            app:destination="@id/TercerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SegundoFragment"
+        android:name="mx.edu.uteq.dapps.holamundo.SegundoFragment"
+        tools:layout="@layout/fragment_segundo"
+        android:label="Fragmento dos" />
+
+    <fragment
+        android:id="@+id/TercerFragment"
+        android:name="mx.edu.uteq.dapps.holamundo.TercerFragment"
+        tools:layout="@layout/fragment_tercer"
+        android:label="Fragmento tres" />
+
+
+</navigation>

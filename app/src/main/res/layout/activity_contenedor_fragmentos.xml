@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContenedorFragmentosActivity"
+    android:orientation="vertical"
+    android:weightSum="12">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:src="@drawable/tacos"
+        android:scaleType="centerCrop"
+        android:layout_weight="2" />
+
+    <!-- Indicamos el fragmento -->
+    <fragment
+        android:id="@+id/host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_fragmentos"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:weightSum="12">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mb_f1"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:layout_height="match_parent"
+            android:text="F1"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mb_f2"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="4dp"
+            android:text="F2"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mb_f3"
+            android:layout_width="0dp"
+            android:layout_weight="4"
+            android:layout_marginEnd="4dp"
+            android:layout_height="match_parent"
+            android:text="F3"/>
+
+    </LinearLayout>
+
+</LinearLayout>

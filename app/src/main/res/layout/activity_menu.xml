@@ -81,32 +81,12 @@
                 android:layout_margin="8dp"
                 android:text="Controles de seleccion" />
 
-            <com.google.android.material.textfield.TextInputLayout
+            <Button
+                android:id="@+id/btn_fragmentos"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:padding="8dp"
-                android:hint="Color"
-                style="@style/Theme.HolaMundo.MiTIL.Login">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Color"
-                style="@style/Theme.HolaMundo.MiTIL">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textColor="#A45D00"/>
-
-            </com.google.android.material.textfield.TextInputLayout>
+                android:text="Fragmentos" />
 
         </LinearLayout>
 

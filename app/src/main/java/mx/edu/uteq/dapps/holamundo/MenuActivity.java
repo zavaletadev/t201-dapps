@@ -21,6 +21,7 @@ public class MenuActivity extends AppCompatActivity {
     private Button btnEstilostexto;
     private Button btnEstilosBoton;
     private Button btnControlesSel;
+    private Button btnFragmentos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +41,7 @@ public class MenuActivity extends AppCompatActivity {
         btnEstilostexto = findViewById(R.id.btn_estilostexto);
         btnEstilosBoton = findViewById(R.id.btn_estilosboton);
         btnControlesSel = findViewById(R.id.btn_controles_sel);
+        btnFragmentos = findViewById(R.id.btn_fragmentos);
         /*
         Programamos el evento click del boton con id "btn_ej1"
         El evento click utiliza el método seOnClickListener y pasamos
@@ -163,6 +165,18 @@ public class MenuActivity extends AppCompatActivity {
                         new Intent(
                                 MenuActivity.this,
                                 ControlesSeleccionActivity.class
+                        )
+                );
+            }
+        });
+
+        btnFragmentos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(
+                        new Intent(
+                                MenuActivity.this,
+                                ContenedorFragmentosActivity.class
                         )
                 );
             }

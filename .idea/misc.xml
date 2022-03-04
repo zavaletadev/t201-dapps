@@ -8,6 +8,7 @@
         <entry key="app/src/main/res/drawable/ic_save.xml" value="0.171" />
         <entry key="app/src/main/res/drawable/ic_tag_faces.xml" value="0.37538304392236976" />
         <entry key="app/src/main/res/drawable/ic_whatsapp.xml" value="0.194" />
+        <entry key="app/src/main/res/layout/activity_contenedor_fragmentos.xml" value="0.33" />
         <entry key="app/src/main/res/layout/activity_controles_entrada.xml" value="0.43201542912246865" />
         <entry key="app/src/main/res/layout/activity_controles_seleccion.xml" value="0.3377659574468085" />
         <entry key="app/src/main/res/layout/activity_estilo_botones.xml" value="0.33" />
@@ -18,6 +19,9 @@
         <entry key="app/src/main/res/layout/activity_menu.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_scroll.xml" value="1.0" />
         <entry key="app/src/main/res/layout/activity_table_layout.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_primer.xml" value="0.3625" />
+        <entry key="app/src/main/res/layout/fragment_segundo.xml" value="0.3625" />
+        <entry key="app/src/main/res/layout/fragment_tercer.xml" value="0.3625" />
         <entry key="app/src/main/res/menu/menu_controles.xml" value="0.5" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3828125" />
       </map>
