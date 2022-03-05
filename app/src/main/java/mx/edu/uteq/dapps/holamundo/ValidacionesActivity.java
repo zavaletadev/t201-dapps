@@ -2,6 +2,7 @@ package mx.edu.uteq.dapps.holamundo;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -112,19 +113,60 @@ public class ValidacionesActivity extends AppCompatActivity {
          */
         binding.mbValidar.setOnClickListener(view -> {
             /*
-            Validamos a nombre
+            Validamos QUE EL NOMBRE SEA INCORRECTO
              */
-            validarNombre(binding.tietNombre.getText().toString());
+            if (!validarNombre(binding.tietNombre.getText().toString())) {
+                //Programamos cuando el NO nombre sea valido
+                //Terminar con el click para que ya no se ejecute NADA
+                return;
+            }
 
             /*
-            Validamos el correo electrónico
+            Validamos QUE EL CORREO SEA INCORRECTO
              */
-            validarCorreo(binding.tietEmail.getText().toString());
+            if (!validarCorreo(binding.tietEmail.getText().toString())) {
+                //Terminaos el evento click
+                return;
+            }
 
             /*
-            Validamos el teléfono
+            Validamos QUE EL TELÉFONO SEA INCORRECTO
              */
-            validarTelefono(binding.tietTelefono.getText().toString());
+            if (!validarTelefono(binding.tietTelefono.getText().toString())) {
+                //Terminamos el click
+                return;
+            }
+
+            /*
+            ESTA SECCIÓN DLE CÓDIGO SOLO SE VA EJECUTAR SI NO CAEMOS EN NINGUNO
+            DE LOS IF ANTERIORES
+             */
+
+            /*
+            Alerta para confirmar los datos, editarlos o regresar a
+            la pantalla anterior
+             */
+            AlertDialog.Builder alerta = new AlertDialog.Builder(ValidacionesActivity.this);
+            alerta.setTitle("¿Son todos los datos correctos?");
+            alerta.setIcon(R.drawable.ic_quiz);
+            alerta.setMessage("Crearemos una cuenta con tu información ingresada");
+            alerta.setCancelable(false);
+
+            //icono al boton neutral === editar formulario
+            alerta.setNeutralButtonIcon(getDrawable(R.drawable.ic_edit_note));
+            alerta.setNeutralButton("", null);
+
+            //icono al boton negative === regresar al menu principal
+            alerta.setNegativeButtonIcon(getDrawable(R.drawable.ic_clear));
+            alerta.setNegativeButton("", null);
+
+            //icono al boton positive === mandar los datos al sig activity
+            alerta.setPositiveButtonIcon(getDrawable(R.drawable.ic_save));
+            alerta.setPositiveButton("", null);
+
+            //Mostramos la alerta
+            alerta.show();
+
         });
 
     }
