@@ -187,13 +187,51 @@ public class ValidacionesActivity extends AppCompatActivity {
             alerta.setPositiveButton("", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
-                    //Vamos a la siguiente pantalla
+                    /*
+                    Los Intent puede enviar información serializda de una pantalla
+                    a otra, utilizando un putExtra
+                     putExtra está delimintado por el tipo de dato
+                     putExtra("nombre_para_enviar", valor);
+                     putExtra("edad", 33);
+                     putExtra("nombre", "Raul");
+                     */
+
+
+                    /*
+                    Vamos a la siguiente pantalla enviando los valores
+                    ingrsados en en formulario
+                     */
+                    final String valorNombre = binding.tietNombre.getText().toString();
+                    final String valorEmail = binding.tietEmail.getText().toString();
+                    final String valorTelefono = binding.tietTelefono.getText().toString();
+
+                    /*
+                    Forma 1 de enviar valores entre Activitys
+                     */
                     startActivity(
                         new Intent(
                             ValidacionesActivity.this,
                             RecibeDatosActivity.class
                         )
+                        .putExtra("nombre", valorNombre)
+                        .putExtra("email", valorEmail)
+                        .putExtra("telefono", valorTelefono)
+                        .putExtra("edad", 33)
                     );
+
+                    /*
+                    Forma 2 de enviar valores entre Activitys
+                    CON VARIABLES
+                     */
+                    /*Intent intentRD = new Intent(
+                            ValidacionesActivity.this,
+                            RecibeDatosActivity.class
+                    );
+                    intentRD.putExtra("nombre", valorNombre);
+                    intentRD.putExtra("email", valorEmail);
+                    intentRD.putExtra("telefono", valorTelefono);
+                    intentRD.putExtra("edad", 33);
+                    startActivity(intentRD);*/
                 }
             });
 
