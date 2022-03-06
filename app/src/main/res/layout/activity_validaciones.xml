@@ -83,6 +83,47 @@
         </com.google.android.material.textfield.TextInputLayout>
 <!--        /Teléfono-->
 
+<!--        Edad-->
+        <TextView
+            android:id="@+id/tv_edad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="8dp"
+            android:layout_marginHorizontal="8dp"
+            android:paddingHorizontal="16dp"
+            android:drawableStart="@drawable/ic_elderly"
+            android:drawablePadding="8dp"
+            android:drawableTint="?colorPrimary"
+            android:text="Edad:"
+            style="@style/TextAppearance.MaterialComponents.Body1"
+            android:textColor="?colorPrimary"
+            />
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/ms_edad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Slider edad"
+            android:valueFrom="0"
+            android:valueTo="100"
+            app:tickVisible="false"
+            android:stepSize="1" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_edad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="8dp"
+            android:paddingHorizontal="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="-30dp"
+            app:helperText="Selecciona tu edad"/>
+
+<!--        /Edad-->
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/mb_validar"
             android:layout_width="match_parent"

@@ -14,6 +14,8 @@ import android.util.Patterns;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.google.android.material.slider.Slider;
+
 import mx.edu.uteq.dapps.holamundo.databinding.ActivityValidacionesBinding;
 
 public class ValidacionesActivity extends AppCompatActivity {
@@ -112,6 +114,25 @@ public class ValidacionesActivity extends AppCompatActivity {
         });
 
         /*
+        Mostramos la edad mientras se mueve el Slider
+         */
+        binding.msEdad.addOnChangeListener(new Slider.OnChangeListener() {
+            @Override
+            public void onValueChange(@NonNull Slider slider, float value, boolean fromUser) {
+                /*
+                El parámetro value contiene el valor del Tick del slider al momento
+                de arrastrarlo
+
+                Lo mostramos el textview
+                 */
+                binding.tvEdad.setText("Edad: " + ((int) value) + " años");
+                //Validamos que sea mayor de edad
+                validaEdad((int) value);
+
+            }
+        });
+
+        /*
         Click del botón Registrarse
          */
         binding.mbValidar.setOnClickListener(view -> {
@@ -137,6 +158,13 @@ public class ValidacionesActivity extends AppCompatActivity {
              */
             if (!validarTelefono(binding.tietTelefono.getText().toString())) {
                 //Terminamos el click
+                return;
+            }
+
+            /*
+            Validamos QUE LA EDAD SEA INCORRECTA (MENOR A 18)
+             */
+            if (!validaEdad( (int) binding.msEdad.getValue())) {
                 return;
             }
 
@@ -204,6 +232,7 @@ public class ValidacionesActivity extends AppCompatActivity {
                     final String valorNombre = binding.tietNombre.getText().toString();
                     final String valorEmail = binding.tietEmail.getText().toString();
                     final String valorTelefono = binding.tietTelefono.getText().toString();
+                    final int valorEdad = (int) binding.msEdad.getValue();
 
                     /*
                     Forma 1 de enviar valores entre Activitys
@@ -216,7 +245,7 @@ public class ValidacionesActivity extends AppCompatActivity {
                         .putExtra("nombre", valorNombre)
                         .putExtra("email", valorEmail)
                         .putExtra("telefono", valorTelefono)
-                        .putExtra("edad", 33)
+                        .putExtra("edad", valorEdad)
                     );
 
                     /*
@@ -230,7 +259,7 @@ public class ValidacionesActivity extends AppCompatActivity {
                     intentRD.putExtra("nombre", valorNombre);
                     intentRD.putExtra("email", valorEmail);
                     intentRD.putExtra("telefono", valorTelefono);
-                    intentRD.putExtra("edad", 33);
+                    intentRD.putExtra("edad", valorEdad);
                     startActivity(intentRD);*/
                 }
             });
@@ -324,6 +353,26 @@ public class ValidacionesActivity extends AppCompatActivity {
 
         else {
             binding.tilTelefono.setError("Ingresa un teléfono válido a 10 dígitos");
+            return false;
+        }
+    }
+
+    /**
+     *
+      * @param valor
+     * @return
+     */
+    public boolean validaEdad(int valor) {
+        //Si es mayor de edad es válido
+        if (valor >= 18) {
+            binding.tilEdad.setErrorEnabled(false);
+            return true;
+        }
+
+        else {
+            binding.tilEdad.setError("Para continuar debes ser mayor de edad");
+            binding.tilEdad.setErrorIconDrawable(null);
+
             return false;
         }
     }
