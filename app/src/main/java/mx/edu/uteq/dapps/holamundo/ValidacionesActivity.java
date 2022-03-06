@@ -4,6 +4,9 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -154,15 +157,45 @@ public class ValidacionesActivity extends AppCompatActivity {
 
             //icono al boton neutral === editar formulario
             alerta.setNeutralButtonIcon(getDrawable(R.drawable.ic_edit_note));
-            alerta.setNeutralButton("", null);
+            alerta.setNeutralButton("", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    /*
+                    Borrar el texto de los TEditText
+                     */
+                    //binding.tietNombre.setText("");
+                    //binding.tietEmail.setText("");
+                    //binding.tietTelefono.setText("");
+
+                    //Ponemos el cursos en el campo del nombre
+                    binding.tietNombre.requestFocus();
+                }
+            });
 
             //icono al boton negative === regresar al menu principal
             alerta.setNegativeButtonIcon(getDrawable(R.drawable.ic_clear));
-            alerta.setNegativeButton("", null);
+            alerta.setNegativeButton("", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    //Retorno a la pantalla anterior
+                    finish();
+                }
+            });
 
             //icono al boton positive === mandar los datos al sig activity
             alerta.setPositiveButtonIcon(getDrawable(R.drawable.ic_save));
-            alerta.setPositiveButton("", null);
+            alerta.setPositiveButton("", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    //Vamos a la siguiente pantalla
+                    startActivity(
+                        new Intent(
+                            ValidacionesActivity.this,
+                            RecibeDatosActivity.class
+                        )
+                    );
+                }
+            });
 
             //Mostramos la alerta
             alerta.show();

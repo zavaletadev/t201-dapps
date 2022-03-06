@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HolaMundo">
         <activity
+            android:name=".RecibeDatosActivity"
+            android:exported="false" />
+        <activity
             android:name=".ValidacionesActivity"
             android:exported="false" />
         <activity
