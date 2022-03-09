@@ -95,6 +95,13 @@
                 android:layout_margin="8dp"
                 android:text="Validaciones" />
 
+            <Button
+                android:id="@+id/btn_intro_servicios"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Intro. Servicios" />
+
         </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

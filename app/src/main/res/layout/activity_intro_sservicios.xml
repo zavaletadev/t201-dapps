@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IntroServiciosActivity"
+    android:background="#f0f0f0"
+    android:id="@+id/srl_is">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:padding="8dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:id="@+id/tv_nombre"
+                    android:drawableStart="@drawable/ic_elderly"
+                    android:drawableTint="?colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="{nombre}"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="16dp"
+                    android:layout_margin="8dp"
+                    android:textColor="?colorSecondary"
+                    style="@style/TextAppearance.MaterialComponents.Headline6" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:padding="8dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:id="@+id/tv_matricula"
+                    android:drawableStart="@drawable/ic_elderly"
+                    android:drawableTint="?colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="{matricula}"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="16dp"
+                    android:layout_margin="8dp"
+                    android:textColor="?colorSecondary"
+                    style="@style/TextAppearance.MaterialComponents.Headline6" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:padding="8dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:id="@+id/tv_edad"
+                    android:drawableStart="@drawable/ic_elderly"
+                    android:drawableTint="?colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="{edad}"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="16dp"
+                    android:layout_margin="8dp"
+                    android:textColor="?colorSecondary"
+                    style="@style/TextAppearance.MaterialComponents.Headline6" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:padding="8dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:id="@+id/tv_promedio"
+                    android:drawableStart="@drawable/ic_elderly"
+                    android:drawableTint="?colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="{promedio}"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="16dp"
+                    android:layout_margin="8dp"
+                    android:textColor="?colorSecondary"
+                    style="@style/TextAppearance.MaterialComponents.Headline6" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:padding="8dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:id="@+id/tv_grupo"
+                    android:drawableStart="@drawable/ic_elderly"
+                    android:drawableTint="?colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="{grupo}"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="16dp"
+                    android:layout_margin="8dp"
+                    android:textColor="?colorSecondary"
+                    style="@style/TextAppearance.MaterialComponents.Headline6" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:padding="8dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:id="@+id/tv_titulado"
+                    android:drawableStart="@drawable/ic_elderly"
+                    android:drawableTint="?colorPrimary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="{titulado}"
+                    android:paddingHorizontal="8dp"
+                    android:paddingVertical="16dp"
+                    android:layout_margin="8dp"
+                    android:textColor="?colorSecondary"
+                    style="@style/TextAppearance.MaterialComponents.Headline6" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

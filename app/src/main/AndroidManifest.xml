@@ -2,13 +2,27 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="mx.edu.uteq.dapps.holamundo">
 
+    <!--
+    Los permisos de android se listan en este archivo desde de la etiqueta
+    manifest
+
+    Para indicar que los servicios carecen de certificado
+    indicamos una conexión planade nuestra app
+    android:usesCleartextTraffic="true"
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/nombre_app_corto"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HolaMundo">
+        <activity
+            android:name=".IntroServiciosActivity"
+            android:exported="false" />
         <activity
             android:name=".RecibeDatosActivity"
             android:exported="false" />

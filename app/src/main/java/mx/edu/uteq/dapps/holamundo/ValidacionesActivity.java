@@ -12,7 +12,6 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Patterns;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 import com.google.android.material.slider.Slider;
 

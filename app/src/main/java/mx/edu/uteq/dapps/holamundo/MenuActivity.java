@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import mx.edu.uteq.dapps.holamundo.databinding.ActivityMenuBinding;
+
 public class MenuActivity extends AppCompatActivity {
 
     /*
@@ -24,10 +26,16 @@ public class MenuActivity extends AppCompatActivity {
     private Button btnFragmentos;
     private Button btnValidaciones;
 
+    /*
+    Implementamos ViewBinding en el proyecto
+     */
+    private ActivityMenuBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu);
+        binding = ActivityMenuBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
         /*
         Una vez creado el atributo, lo inicializamos indicando el
@@ -184,12 +192,22 @@ public class MenuActivity extends AppCompatActivity {
             }
         });
 
-        //Funcione Lambda
+        //Funciones Lambda
         btnValidaciones.setOnClickListener(view -> {
             startActivity(
                     new Intent(
                             MenuActivity.this,
                             ValidacionesActivity.class
+                    )
+            );
+        });
+
+        //Botón servicios
+        binding.btnIntroServicios.setOnClickListener(view -> {
+            startActivity(
+                    new Intent(
+                            MenuActivity.this,
+                            IntroServiciosActivity.class
                     )
             );
         });

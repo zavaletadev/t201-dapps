@@ -50,4 +50,9 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.navigation:navigation-fragment:2.4.1'
     implementation 'androidx.navigation:navigation-ui:2.4.1'
+
+    /*
+    Librería para servicios http
+     */
+    implementation 'com.android.volley:volley:1.2.1'
 }
