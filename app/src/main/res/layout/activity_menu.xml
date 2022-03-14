@@ -102,6 +102,13 @@
                 android:layout_margin="8dp"
                 android:text="Intro. Servicios" />
 
+            <Button
+                android:id="@+id/btn_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="ListView Simple (Local)" />
+
         </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ListViewEjemploActivity"
+    android:orientation="vertical">
+
+    <!--
+    Los ListView por defecto contienen un Scroll, por lo que
+    NO PODEMOS AGREGARLOS DENTRO DE UN NestedScrollView,
+    el componente padre de un ListView, preferentemente debería
+    ser un SwipeRefresh, LinearLayout o ConstraintLayout
+    -->
+    <ListView
+        android:id="@+id/lv_ejemplo_local"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

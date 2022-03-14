@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="mx.edu.uteq.dapps.holamundo">
-
     <!--
     Los permisos de android se listan en este archivo desde de la etiqueta
     manifest
@@ -13,13 +12,16 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/nombre_app_corto"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.HolaMundo">
+        android:theme="@style/Theme.HolaMundo"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ListViewEjemploActivity"
+            android:exported="false" />
         <activity
             android:name=".IntroServiciosActivity"
             android:exported="false" />

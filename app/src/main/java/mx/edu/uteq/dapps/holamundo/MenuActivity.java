@@ -212,5 +212,15 @@ public class MenuActivity extends AppCompatActivity {
             );
         });
 
+        //L¡Ejemplo listview local
+        binding.btnListview.setOnClickListener(view -> {
+            startActivity(
+                new Intent(
+                        MenuActivity.this,
+                        ListViewEjemploActivity.class
+                )
+            );
+        });
+
     } // termina oncreate
 } // termina la clase
