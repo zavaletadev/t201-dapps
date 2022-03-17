@@ -222,5 +222,15 @@ public class MenuActivity extends AppCompatActivity {
             );
         });
 
+        //Registro remoto
+        binding.btnRegistroRemoto.setOnClickListener(view -> {
+            startActivity(
+                    new Intent(
+                            MenuActivity.this,
+                            RegistroRemotoActivity.class
+                    )
+            );
+        });
+
     } // termina oncreate
 } // termina la clase

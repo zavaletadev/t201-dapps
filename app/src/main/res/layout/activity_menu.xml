@@ -109,6 +109,14 @@
                 android:layout_margin="8dp"
                 android:text="ListView Simple (Local)" />
 
+            <Button
+                android:id="@+id/btn_registro_remoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Registro remoto" />
+
+
         </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>

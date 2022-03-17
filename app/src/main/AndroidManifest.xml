@@ -20,6 +20,10 @@
         android:theme="@style/Theme.HolaMundo"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".RegistroRemotoActivity"
+            android:exported="false"
+            android:label="Registro"/>
+        <activity
             android:name=".ListViewEjemploActivity"
             android:exported="false" />
         <activity
