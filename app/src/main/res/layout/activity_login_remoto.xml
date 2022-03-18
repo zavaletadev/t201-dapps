@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegistroRemotoActivity"
+    tools:context=".LoginRemotoActivity"
     android:background="#ededed">
 
     <LinearLayout
+        android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -15,7 +16,8 @@
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
+            android:layout_marginVertical="8dp"
+            android:layout_marginHorizontal="16dp"
             android:paddingVertical="8dp"
             app:cardCornerRadius="4dp">
 
@@ -24,49 +26,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-<!--                Nombre-->
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/til_nombre"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="16dp"
-                    android:layout_marginVertical="8dp"
-                    android:padding="8dp"
-                    app:startIconDrawable="@drawable/ic_person"
-                    app:endIconMode="clear_text"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:hint="Nombre">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/tiet_nombre"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textPersonName"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-<!--                Apellidos-->
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/til_apellidos"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="16dp"
-                    android:layout_marginVertical="8dp"
-                    android:padding="8dp"
-                    app:startIconDrawable="@drawable/ic_edit_note"
-                    app:endIconMode="clear_text"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-                    android:hint="Apellidos">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:id="@+id/tiet_apellidos"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:inputType="textPersonName"/>
-
-                </com.google.android.material.textfield.TextInputLayout>
-
-<!--                Usuario-->
+                <!--                Usuario-->
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/til_usuario"
                     android:layout_width="match_parent"
@@ -83,7 +43,7 @@
                         android:id="@+id/tiet_usuario"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="tatan@gmail.com"
+                        android:text="raul.zavaletazea@uteq.edu.mx"
                         android:inputType="textEmailAddress"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -104,20 +64,10 @@
                         android:id="@+id/tiet_password"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="textPassword"/>
+                        android:inputType="textPassword"
+                        android:text="12345678"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/mb_registro"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="16dp"
-                    android:layout_margin="16dp"
-                    android:text="Registrarme"
-                    app:icon="@drawable/ic_save"
-                    app:iconGravity="textStart"
-                    app:cornerRadius="8dp"/>
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/mb_login"
@@ -128,8 +78,21 @@
                     android:text="Iniciar sesión"
                     app:icon="@drawable/ic_check_circle"
                     app:iconGravity="textStart"
+                    app:cornerRadius="8dp"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/mb_registro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:layout_margin="16dp"
+                    android:text="Registrarme"
+                    app:icon="@drawable/ic_save"
+                    app:iconGravity="textStart"
                     style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                     app:cornerRadius="8dp"/>
+
+
             </LinearLayout>
 
 

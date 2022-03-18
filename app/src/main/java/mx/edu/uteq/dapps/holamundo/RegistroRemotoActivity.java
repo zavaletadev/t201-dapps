@@ -5,6 +5,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -56,6 +57,18 @@ public class RegistroRemotoActivity extends AppCompatActivity {
          */
         progress = new ProgressDialog(RegistroRemotoActivity.this);
         conexionServ = Volley.newRequestQueue(RegistroRemotoActivity.this);
+
+        /*
+        Click login
+         */
+        binding.mbLogin.setOnClickListener(view -> {
+            startActivity(
+                    new Intent(
+                            RegistroRemotoActivity.this,
+                            LoginRemotoActivity.class
+                    )
+            );
+        });
 
         /*
         Click del boton registrarme
@@ -121,7 +134,18 @@ public class RegistroRemotoActivity extends AppCompatActivity {
                                 /*
                                 Mensaje de éxito y hacer lo que sigue
                                  */
-                                Snackbar.make(view, mensaje, Snackbar.LENGTH_LONG).show();
+                                Snackbar
+                                        .make(view, mensaje, Snackbar.LENGTH_INDEFINITE)
+                                        .setAction("Login", view -> {
+                                            //Redireccionamos al login
+                                            startActivity(
+                                                    new Intent(
+                                                            RegistroRemotoActivity.this,
+                                                            LoginRemotoActivity.class
+                                                    )
+                                            );
+                                        })
+                                        .show();
                             }
 
                             else {
@@ -168,8 +192,7 @@ public class RegistroRemotoActivity extends AppCompatActivity {
 
         }); // clic btn registro
 
-
-    }
+    } // oncreate
 
     //Ayúdame a programar el optionsBacHome
 }

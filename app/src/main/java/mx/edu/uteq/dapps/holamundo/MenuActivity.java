@@ -232,5 +232,15 @@ public class MenuActivity extends AppCompatActivity {
             );
         });
 
+        //Boton logi remoto
+        binding.btnLoginRemoto.setOnClickListener(view -> {
+            startActivity(
+                    new Intent(
+                            MenuActivity.this,
+                            LoginRemotoActivity.class
+                    )
+            );
+        });
+
     } // termina oncreate
 } // termina la clase

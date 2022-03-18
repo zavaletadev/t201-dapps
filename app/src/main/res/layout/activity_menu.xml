@@ -116,6 +116,13 @@
                 android:layout_margin="8dp"
                 android:text="Registro remoto" />
 
+            <Button
+                android:id="@+id/btn_login_remoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="Login remoto" />
+
 
         </LinearLayout>
 
