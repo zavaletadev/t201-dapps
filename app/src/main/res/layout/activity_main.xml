@@ -6,13 +6,61 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!--
+    Cuando utilizamos constraint layout, necesitamos indicar
+    como mínimo un constraint para cada eje (vertical|horrizontal
+    Podemos indicar los siguinetes elementos de contraint
+    start (izquierda)
+    top (arriba)
+    end (derecha)
+    bottom (abajo)
+
+    Los tipos de restricciones (constraints)
+    start_to_start_of     = (de izquierda a izquierda de)
+    start_to_end_of       = (de izquierda a derecha de)
+    top_to_top_of         = (de arriba a arriba de)
+    top_to_bottom_of      = (de arriba a abajo de)
+    end_to_end_of         = (de derecha a derecha de)
+    end_to_start_if       = (de derecha a izquierda de)
+    bottom_to_bottom_of   = (de abajo a abajo de)
+    bottom_to_top_of      = (de abajo a arriba de)
+
+    -->
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="0dp"
+        android:layout_height="128dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/pb_check_login"
+        android:src="@drawable/logo"
+        app:layout_constraintVertical_chainStyle="packed"/>
+
+    <ProgressBar
+        android:id="@+id/pb_check_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tv_check_login"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginVertical="16dp"
+        android:indeterminate="true"/>
+
     <TextView
+        android:id="@+id/tv_check_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pb_check_login"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Inicializando app, por favor espera..."
+        style="@style/TextAppearance.MaterialComponents.Headline6"
+        android:textColor="?colorPrimary"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
