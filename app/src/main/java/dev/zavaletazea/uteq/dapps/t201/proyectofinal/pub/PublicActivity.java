@@ -12,6 +12,8 @@ public class PublicActivity extends AppCompatActivity {
 
     private ActivityPublicBinding binding;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
