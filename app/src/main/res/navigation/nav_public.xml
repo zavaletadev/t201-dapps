@@ -12,7 +12,7 @@
         android:id="@+id/CarritoFragment"
         android:name="dev.zavaletazea.uteq.dapps.t201.proyectofinal.pub.fragments.CarritoFragment"
         tools:layout="@layout/fragment_carrito"
-        android:label="Carritoi" />
+        android:label="Carrito" />
 
     <fragment
         android:id="@+id/CatalogoFragment"
