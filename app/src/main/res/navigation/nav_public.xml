@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_public"
+    app:startDestination="@id/CatalogoFragment">
+
+    <!-- Agregamos todos los componentes (fragmentos)
+    navegables en la parte pública del proyecto -->
+
+    <fragment
+        android:id="@+id/CarritoFragment"
+        android:name="dev.zavaletazea.uteq.dapps.t201.proyectofinal.pub.fragments.CarritoFragment"
+        tools:layout="@layout/fragment_carrito"
+        android:label="Carritoi" />
+
+    <fragment
+        android:id="@+id/CatalogoFragment"
+        android:name="dev.zavaletazea.uteq.dapps.t201.proyectofinal.pub.fragments.CatalogoFragment"
+        tools:layout="@layout/fragment_catalogo"
+        android:label="Catálogo" />
+
+    <fragment
+        android:id="@+id/DetalleProdFragment"
+        android:name="dev.zavaletazea.uteq.dapps.t201.proyectofinal.pub.fragments.DetalleProdFragment"
+        tools:layout="@layout/fragment_detalle_prod"
+        android:label="Detalle del producto" />
+
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="dev.zavaletazea.uteq.dapps.t201.proyectofinal.pub.fragments.LoginFragment"
+        tools:layout="@layout/fragment_login"
+        android:label="Iniciar sesión" />
+
+    <fragment
+        android:id="@+id/RegistroFragment"
+        android:name="dev.zavaletazea.uteq.dapps.t201.proyectofinal.pub.fragments.RegistroFragment"
+        tools:layout="@layout/fragment_registro"
+        android:label="Regístrate" />
+
+</navigation>
