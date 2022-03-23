@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Diseño de cada elemento de la lista
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        app:cardCornerRadius="4dp">
+
+        <TextView
+            android:id="@+id/tv_idtp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="{idtp}" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:layout_margin="8dp"
+            android:weightSum="12"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="32dp"
+                android:src="@drawable/label"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:id="@+id/tv_descripcion"
+                android:layout_width="0dp"
+                android:layout_weight="9"
+                android:layout_height="wrap_content"
+                android:text="{descripcion}"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="#505050"
+                android:layout_marginStart="8dp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

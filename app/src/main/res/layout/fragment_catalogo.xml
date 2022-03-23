@@ -6,6 +6,12 @@
     tools:context=".pub.fragments.CatalogoFragment"
     android:id="@+id/srl_categorias">
 
+    <!--
+    Si deseamos generar listView con un diseño personalizado
+    debemos realizar el layout correspondiente a la visualización de
+    cada item
+    -->
+
     <ListView
         android:id="@+id/lv_categorias"
         android:layout_width="match_parent"
