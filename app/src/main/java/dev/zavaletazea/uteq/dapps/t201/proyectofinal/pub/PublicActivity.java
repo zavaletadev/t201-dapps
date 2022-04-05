@@ -99,8 +99,12 @@ public class PublicActivity extends AppCompatActivity {
             break;
 
             case R.id.menu_pub_login:
+                //Param pasar datos
+                Bundle datos = new Bundle();
+                datos.putString("nombre", "raul");
+                datos.putString("matricula", "2007313037");
                 navController.navigateUp();
-                navController.navigate(R.id.LoginFragment);
+                navController.navigate(R.id.LoginFragment, datos);
             break;
         }
         return super.onOptionsItemSelected(item);

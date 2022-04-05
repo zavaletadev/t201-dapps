@@ -21,6 +21,12 @@
         android:label="Catálogo" />
 
     <fragment
+        android:id="@+id/ListaProductosFragment"
+        android:name="dev.zavaletazea.uteq.dapps.t201.proyectofinal.pub.fragments.ListaProductosFragment"
+        tools:layout="@layout/fragment_lista_productos"
+        android:label="Lista de productos" />
+
+    <fragment
         android:id="@+id/DetalleProdFragment"
         android:name="dev.zavaletazea.uteq.dapps.t201.proyectofinal.pub.fragments.DetalleProdFragment"
         tools:layout="@layout/fragment_detalle_prod"

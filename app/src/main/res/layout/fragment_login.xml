@@ -41,7 +41,8 @@
                         android:id="@+id/tiet_usuario"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="textEmailAddress"/>
+                        android:inputType="textEmailAddress"
+                        android:text="anai@gmail.com"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -61,7 +62,8 @@
                         android:id="@+id/tiet_password"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="textPassword" />
+                        android:inputType="textPassword"
+                        android:text="12345678"/>
 
                 </com.google.android.material.textfield.TextInputLayout>
 

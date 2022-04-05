@@ -3,10 +3,13 @@ package dev.zavaletazea.uteq.dapps.t201.proyectofinal.pub.fragments;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -17,6 +20,7 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import dev.zavaletazea.uteq.dapps.t201.proyectofinal.Helper;
 import dev.zavaletazea.uteq.dapps.t201.proyectofinal.R;
 import dev.zavaletazea.uteq.dapps.t201.proyectofinal.databinding.FragmentCatalogoBinding;
 import dev.zavaletazea.uteq.dapps.t201.proyectofinal.pub.TipoProductoAdapter;
@@ -25,8 +29,10 @@ public class CatalogoFragment extends Fragment {
 
     private FragmentCatalogoBinding binding;
     private RequestQueue conServ;
-    private final String END_POINT = "https://zavaletazea.dev/awos/carrito/back/carrito/gettipos";
+    //private final String END_POINT = Helper.baseUrl() + "back/carrito/gettipos";
+    private final String END_POINT = "http://dtai.uteq.edu.mx/~uteq/awos/proyectos/carrito/back/catalogo/get_categorias";
     private TipoProductoAdapter adaptador;
+    private NavController navController;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -50,10 +56,36 @@ public class CatalogoFragment extends Fragment {
             cargaCategorias();
         });
 
+        /*
+        Clic de cada item del listview
+         */
+        binding.lvCategorias.setOnItemClickListener((adapterView, view, i, l) -> {
+
+            TextView tvIdtp = view.findViewById(R.id.tv_idtp);
+
+            navController = Navigation.findNavController(
+                    getActivity(),
+                    R.id.host_public_fragments
+            );
+
+            Bundle datos = new Bundle();
+            datos.putString(
+                "idtp",
+                tvIdtp.getText().toString()
+            );
+            navController.navigateUp();
+            navController.navigate(
+                R.id.ListaProductosFragment,
+                datos
+            );
+        });
+
+
         return binding.getRoot();
     }
 
     public void cargaCategorias() {
+
         binding.srlCategorias.setRefreshing(true);
 
         /*
@@ -89,7 +121,6 @@ public class CatalogoFragment extends Fragment {
                         Asignamos el adaptador al listview
                          */
                         binding.lvCategorias.setAdapter(adaptador);
-
                     }
                 }
 

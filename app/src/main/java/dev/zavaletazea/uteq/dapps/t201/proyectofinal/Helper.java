@@ -1,5 +1,9 @@
 package dev.zavaletazea.uteq.dapps.t201.proyectofinal;
 
+import android.view.View;
+
+import com.google.android.material.snackbar.Snackbar;
+
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -19,7 +23,7 @@ final public class Helper {
      * @param s
      * @return
      */
-    public static String MD5_Hash(String s) {
+    public static String MD5Hash(String s) {
         MessageDigest m = null;
 
         try {
@@ -31,5 +35,10 @@ final public class Helper {
         m.update(s.getBytes(), 0, s.length());
         String hash = new BigInteger(1, m.digest()).toString(16);
         return hash;
+    }
+
+    public static String baseUrl() {
+        //return "https://zavaletazea.dev/awos/carrito/";
+        return "http://dtai.uteq.edu.mx/~uteq/awos/proyectos/carrito/";
     }
 }

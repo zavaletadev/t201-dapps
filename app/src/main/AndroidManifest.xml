@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="dev.zavaletazea.uteq.dapps.t201.proyectofinal">
-    <!--     Agregamos el permiso de internet -->
+    <!-- Agregamos el permiso de internet -->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -13,9 +13,12 @@
         android:theme="@style/Theme.ProyectoFinal"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".priv.HomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".pub.PublicActivity"
             android:exported="false"
-            android:label="Mi tiendita"/>
+            android:label="Mi tiendita" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
