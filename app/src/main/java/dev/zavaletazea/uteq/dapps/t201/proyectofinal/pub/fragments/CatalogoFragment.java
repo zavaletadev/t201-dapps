@@ -20,9 +20,13 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import dev.zavaletazea.uteq.dapps.t201.proyectofinal.Helper;
 import dev.zavaletazea.uteq.dapps.t201.proyectofinal.R;
 import dev.zavaletazea.uteq.dapps.t201.proyectofinal.databinding.FragmentCatalogoBinding;
+import dev.zavaletazea.uteq.dapps.t201.proyectofinal.entities.TipoProducto;
 import dev.zavaletazea.uteq.dapps.t201.proyectofinal.pub.TipoProductoAdapter;
 
 public class CatalogoFragment extends Fragment {
@@ -109,12 +113,38 @@ public class CatalogoFragment extends Fragment {
                         JSONArray arrTipos = objRespuesta.getJSONArray("tipos");
 
                         /*
+                        Inicializamos una lista de tipoproducto
+                         */
+                        List<TipoProducto> datos = new ArrayList<>();
+
+                        /*
+                        Recorremos el arreglo JSON
+                         */
+                        for (int i = 0; i < arrTipos.length(); i++) {
+                            //Por cada elemeno del arreglo JSON
+                            //creamos un objeto
+                            JSONObject objCat = arrTipos.getJSONObject(i);
+
+                            //Crear un objeto de tiupoproducto
+                            TipoProducto cat = new TipoProducto();
+
+                            //Pasamos los datos del objeto JSON
+                            //a nuestro tipoproducto
+                            cat.setIdtp(objCat.getInt("idtp"));
+                            cat.setDescripcion(objCat.getString("descripcion"));
+
+                            //Agregamos el tipoproducto a nuestra lista
+
+                            datos.add(cat);
+                        }
+
+                        /*
                         Creamos un adaptador (TipoProductoAdapter) y le pasamos
                         el arreglo de tipos
                          */
                         adaptador = new TipoProductoAdapter(
                             getActivity(),
-                            arrTipos
+                            datos
                         );
 
                         /*

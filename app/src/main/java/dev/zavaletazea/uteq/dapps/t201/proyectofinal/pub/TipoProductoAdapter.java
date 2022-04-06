@@ -7,11 +7,15 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.util.List;
+
 import dev.zavaletazea.uteq.dapps.t201.proyectofinal.R;
+import dev.zavaletazea.uteq.dapps.t201.proyectofinal.entities.TipoProducto;
 
 /*
 Un adaptador es un intermediario entre la vista y el controlador
@@ -31,13 +35,13 @@ public class TipoProductoAdapter extends BaseAdapter {
     /*
     Los adaptadores necesitan 3 elementos como minimo para funcionar:
         Contexto
-        Colección de datos (JsonArray)
+        Colección de datos (LISTA DE TIPOPRODUCTO)
         Latyout (diseño) de cada elementos del arreglo
      */
-    private JSONArray datos; //Arreglo de datos del servicio
+    private List<TipoProducto> datos; //Arreglo de datos del servicio
     private LayoutInflater inflater; //Componente para ligar el xml a cada elementos de datos
 
-    public TipoProductoAdapter(Context contexto, JSONArray datos)  {
+    public TipoProductoAdapter(Context contexto, List<TipoProducto> datos)  {
         /*
         Inicializar los elementos del adapter
          */
@@ -51,7 +55,7 @@ public class TipoProductoAdapter extends BaseAdapter {
      */
     @Override
     public int getCount() {
-        return datos.length();
+        return datos.size();
     }
 
     @Override
@@ -85,10 +89,10 @@ public class TipoProductoAdapter extends BaseAdapter {
          */
         try {
             /*
-            Creamos un objeto json por cada elementos del
-            arreglo
+            Creamos un objeto  de tipo producto
+            por cada elemento de la lista
              */
-            JSONObject objTipo = datos.getJSONObject(i);
+            TipoProducto cat = datos.get(i);
 
             /*
             View puede acceder al xml
@@ -96,10 +100,11 @@ public class TipoProductoAdapter extends BaseAdapter {
             de los componentes gráficos
              */
             TextView tvIdtp = view.findViewById(R.id.tv_idtp);
-            tvIdtp.setText(objTipo.getString("idtp"));
+            //Convertimos el id a String
+            tvIdtp.setText(String.valueOf(cat.getIdtp()));
 
             TextView tvDesc = view.findViewById(R.id.tv_descripcion);
-            tvDesc.setText(objTipo.getString("descripcion"));
+            tvDesc.setText(cat.getDescripcion());
         }
         catch (Exception e) {
             Log.e("Error tiposprod", e.getMessage());
