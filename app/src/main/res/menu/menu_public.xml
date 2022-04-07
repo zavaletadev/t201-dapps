@@ -10,6 +10,13 @@
         android:icon="@drawable/ic_format_list_bulleted" />
 
     <item
+        android:id="@+id/menu_pub_listadeseos"
+        android:title="L. Deseos"
+        android:orderInCategory="50"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_favorite" />
+
+    <item
         android:id="@+id/menu_pub_login"
         android:title="Iniciar sesión"
         android:orderInCategory="110"

@@ -100,6 +100,11 @@ public class LoginFragment extends Fragment {
                                 "uai",
                                 Helper.MD5Hash(objUsuario.getString("idusuario"))
                             );
+                            //Guardamos el id del usuario son encriptar
+                            sPrefsEditor.putString(
+                                    "idusuario",
+                                    objUsuario.getString("idusuario")
+                            );
                             sPrefsEditor.commit();
                         }
 
