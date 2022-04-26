@@ -79,6 +79,32 @@
 
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="12">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/mb_agrega_listadeseos"
+                        android:layout_width="0dp"
+                        android:layout_weight="6"
+                        android:layout_marginEnd="4dp"
+                        android:layout_height="wrap_content"
+                        app:icon="@drawable/ic_favorite"
+                        app:iconGravity="textTop"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/mb_agrega_carrito"
+                        android:layout_width="0dp"
+                        android:layout_weight="6"
+                        android:layout_marginStart="4dp"
+                        app:icon="@drawable/ic_shopping_cart"
+                        app:iconGravity="textTop"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
             </LinearLayout>
 
 

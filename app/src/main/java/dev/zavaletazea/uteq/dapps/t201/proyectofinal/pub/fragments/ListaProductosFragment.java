@@ -58,8 +58,12 @@ public class ListaProductosFragment extends Fragment {
             actualizaProductos();
         });
 
+        /**
+         * Actualizamos la funcionalidad del clic de la lista a sus respectivos
+         * botones, (la progra se encuentra en el adaptador)
+         */
         //Click de cualquier elemento del ListView de productos
-        binding.lvProductos.setOnItemClickListener((adapterView, view, i, l) -> {
+        /*binding.lvProductos.setOnItemClickListener((adapterView, view, i, l) -> {
             //al darle click a un producto, tomamos su idProducto
             TextView tvIdprodcuto = view.findViewById(R.id.tv_idproducto);
 
@@ -67,7 +71,7 @@ public class ListaProductosFragment extends Fragment {
             agregarListaDeseos(
                 tvIdprodcuto.getText().toString()
             );
-        });
+        });*/
 
         return binding.getRoot();
     }
@@ -84,7 +88,8 @@ public class ListaProductosFragment extends Fragment {
                     if (objRespuesta.getBoolean("resultado")) {
                         adaptador = new ProductoAdapter(
                                 getActivity(),
-                                objRespuesta.getJSONArray("productos")
+                                objRespuesta.getJSONArray("productos"),
+                                getActivity()
                         );
                         binding.lvProductos.setAdapter(adaptador);
                     }
