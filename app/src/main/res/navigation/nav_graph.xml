@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/SpinnersFragment">
+
+    <fragment
+        android:id="@+id/FirstFragment"
+        android:name="dev.zavaletazea.uteq.dapps.t201.demoextraordinario.FirstFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first">
+
+        <action
+            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            app:destination="@id/SecondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SecondFragment"
+        android:name="dev.zavaletazea.uteq.dapps.t201.demoextraordinario.SecondFragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second">
+
+        <action
+            android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/LoginFragment"
+        android:name="dev.zavaletazea.uteq.dapps.t201.demoextraordinario.LoginFragment"
+        android:label="Iniciar sesión"
+        tools:layout="@layout/fragment_login" />
+
+    <fragment
+        android:id="@+id/SpinnersFragment"
+        android:name="dev.zavaletazea.uteq.dapps.t201.demoextraordinario.SpinnersAnidadosFragment"
+        android:label="Ejemplo Spinners anidados"
+        tools:layout="@layout/fragment_spinners_anidados" />
+
+</navigation>
